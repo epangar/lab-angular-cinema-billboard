@@ -130,10 +130,12 @@ export class MovieControlService {
     return this.movies;
   }
 
-  getMovie(movieID){
-    this.movies = this.movies.filter(
-      (Film) => Film.id ===movieID
-    );
+  getMovie(ID){
+    for(let i=0;i<this.movies.length;i++){
+      if(this.movies[i].id===ID){
+        return this.movies[i];
+      }
+    }
   }
 
 }
