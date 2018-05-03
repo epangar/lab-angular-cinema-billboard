@@ -1,4 +1,21 @@
-<h1>
-  IRON CINEMA
-</h1>
-<app-root></app-root>
+<div *ngFor="let movie of movies" >
+  <p>****************************</p>
+  <p>{{movie.title}}</p>
+  <img src={{movie.poster}} height="10%" width="10%">
+ 
+  </div>
+  
+  <p>****************************</p>
+  <router-outlet></router-outlet>
+
+  <!--
+  id: Number;
+  title : String;
+  poster : String;
+  synopsis : String;
+  genres : Array<string>;
+  year : Number;
+  director  : String;
+  actors : Array<string>;
+  hours: Array<string>;
+  room : Number;-->
